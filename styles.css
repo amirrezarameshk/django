@@ -1,0 +1,263 @@
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --text: #0f172a;
+  --muted: #64748b;
+  --surface: #ffffff;
+  --background: #f8fafc;
+  --border: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 10px;
+  z-index: 100000;
+  width: 80%;
+  margin: 10px auto 0 auto; 
+  border-radius: 16px;
+  background-color: #5771ba31;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px; 
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: bold;
+  transition: font-size 1s;
+}
+
+.logo:hover {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+nav a {
+  color: rgb(63, 63, 63);
+  text-decoration: none;
+  margin-right: 16px;
+  transition: color 0.5s;
+  transition: font-size 1s;
+}
+
+nav a:hover {
+  color: var(--primary);
+  font-size: large;
+}
+
+.hero {
+  padding: 64px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.hero-text {
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.button {
+  display: inline-block;
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  transition: background 0.3s;
+  
+}
+
+.button:hover {
+  background: var(--primary-dark);
+}
+
+.hero-card,
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0, 0.1);
+  transition: all 1s;
+}
+
+.hero-card:hover{
+  box-shadow: 0px 0px 10px 1px #0000ff3e;
+}
+.card:hover{
+  box-shadow: 0px 0px 10px 1px #0000ff3e;
+}
+
+.hero-card strong {
+  display: block;
+  font-size: 36px;
+  margin: 12px 0;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.section h2 {
+  margin-bottom: 24px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 700px) {
+  .hero-grid,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  .site-header {
+    width: 95%;
+  }
+}
+
+.students {
+  margin: auto;
+  margin-bottom: 100px;
+
+}
+
+.student {
+    background-color: var(--border);
+    box-shadow: 0px 0px 10px -2px black;
+    padding: 5px;
+    border-radius: 16px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.footer {
+  width: 80%;
+  height: 100px ;
+  margin: auto;
+  margin-bottom: 0%;
+  margin-top: 10px; 
+  border-radius: 50px 50px 0px 0;
+  background-color: #5771ba31;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 4px solid var(--primary);
+  box-shadow: 0px 0px 10px -2px black;
+  margin-right: 0%;
+  filter: none;
+  transition: border, filter 1s;
+
+}
+
+img:hover {
+  border: 4px solid rgba(0, 64, 255, 0.73);
+  filter:opacity(80%)
+}
+
+.card-students {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: rgba(0, 0, 255, 0.434);
+  border-radius: 16px;
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.134);
+}
+
+.student-form {
+  padding: 0%;
+  margin: auto;
+  margin-right: 30px;
+}
+
+.score {
+  margin-left: 5%;
+  color: var(--text);
+  font-size: large;
+}
+
+.A1 {
+  display: flex;
+  filter: blur(5px);
+  transition: 0.5s;
+  margin-left: auto;
+}
+
+.A1:hover {
+  filter: none;
+}
+
+.A2 {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: table;
+}
+
+.A2 a {
+  margin-right: 42%;
+  margin-top: 50px;
+}
